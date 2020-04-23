@@ -1,0 +1,27 @@
+.sidebar {
+    height: 100%;
+    background-color: #222222;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    position: fixed !important;
+    top: 0;
+}
+
+ul { 
+    padding: 0;
+}
+
+li {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid whitesmoke;
+    color: white;
+    text-align: center;
+    list-style-type: none;
+}
+
+li:hover {
+    background-color: wheat;
+    color: black;
+}

@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Sidebar from './components/sidebar/Sidebar';
+import About from './components/dashboard/about/About';
+import JobBoard from './components/dashboard/jobSection/jobBoard';
+import data from './data/jobInfo';
+import Navbar from './components/navbar/navbar';
+
+const containerStyle = {
+    'marginLeft': '20%',
+    'position': 'relative',
+    'marginTop': '50px'
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar />
+      <Navbar />
+      <div className="container" style={containerStyle}>
+        <About />
+        <JobBoard jobs={data} />
+      </div>
     </div>
   );
 }
